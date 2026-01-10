@@ -1,0 +1,25 @@
+.button {
+  display: inline-block;
+  margin: 20px;
+  background: linear-gradient(180deg, yellow, orange);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+/*
+button.css
+- Styles for Button component
+- Currently global: any element with class="button" will use this
+- Contains colors, padding, border-radius, font styles
+- Collision warning: same class names in other files will override/apply here
+- Future tip: rename class uniquely or use CSS Modules
+
+
+SIMPLE FORM: Collision warning: same class names in other files will override/apply here
+
+“Hey! Watch out, another CSS file might have a .button class. If it does, it might override or affect this element, even if you didn’t import it.”
+*/

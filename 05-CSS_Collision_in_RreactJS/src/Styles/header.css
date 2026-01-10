@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  background: purple;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/*
+header.css
+- Styles for header component
+- Sets layout, background, font size, spacing
+- Does NOT contain button styles, but may be affected by global CSS
+- Future tip: use unique class names or CSS Modules to isolate
+*/
