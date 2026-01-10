@@ -1,0 +1,11 @@
+.btn {
+  display: inline-block;
+  margin: 20px;
+  background: linear-gradient(180deg, yellow, orange);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
