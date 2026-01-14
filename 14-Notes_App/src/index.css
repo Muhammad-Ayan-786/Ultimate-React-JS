@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* --------------------------
+   Premium UI layer (global)
+   -------------------------- */
+
+:root {
+  color-scheme: light;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.25);
+}
+
+.app-bg {
+  /* subtle grid + gradient glow */
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(99, 102, 241, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 85% 20%, rgba(217, 70, 239, 0.16), transparent 55%),
+    radial-gradient(700px 500px at 50% 90%, rgba(59, 130, 246, 0.10), transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2ff 40%, #f8fafc 100%);
+  background-attachment: fixed;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+}
+
+.ui-field {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.ui-primary-btn {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 45%, #d946ef 100%);
+}
+.ui-primary-btn:hover {
+  filter: brightness(1.02);
+}
+.ui-primary-btn:active {
+  filter: brightness(0.98);
+}
+
+.ui-danger-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #ec4899 100%);
+}
+.ui-danger-btn:hover {
+  filter: brightness(1.02);
+}
+.ui-danger-btn:active {
+  filter: brightness(0.98);
+}
+
+.notes-grid {
+  scroll-behavior: smooth;
+}
+
+/* Robust multi-line clamp (Tailwind line-clamp plugin not required) */
+.notesDescp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 6;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+}
+
+/* keep title readable, clamp if long */
+.notesTitle {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notes-grid {
+    scroll-behavior: auto;
+  }
+}
+
+
+textarea::-webkit-scrollbar,
+.notesDescp::-webkit-scrollbar,
+.notesTitle::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  /* Scrollbar size */
+  --scrollbar-size: 6px;
+  --scrollbar-radius: 999px;
+
+  /* Track */
+  --scrollbar-track: #0b0c10;
+
+  /* Thumb (main accent colors) */
+  --scrollbar-thumb: linear-gradient(180deg,
+      #c9c9cd,
+      #8f899a,
+      #727c87);
+
+  /* Effects */
+  --scrollbar-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Base */
+::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--scrollbar-radius);
+  box-shadow: var(--scrollbar-shadow);
+}
