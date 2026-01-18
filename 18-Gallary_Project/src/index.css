@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+*::selection {
+  background: #a2e1ff;
+  color: #fff;
+}
+
+body {
+  font-family: "Google Sans", sans-serif;
+}
+
+.artist,
+.img {
+  transition: all .4s ease;
+}
+
+.img-card:hover .img {
+  filter: blur(2px);
+}
+
+.img-card:hover .artist {
+  transform: translateY(-20%);
+}
