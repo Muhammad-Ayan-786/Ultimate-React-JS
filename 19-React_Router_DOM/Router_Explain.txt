@@ -1,0 +1,114 @@
+Run this in Terminal :
+npm i react-router-dom
+
+
+Types Of Routers :
+
+
+BrowserRouter :
+
+BrowserRouter uses the HTML5 History API to manage routing in the browser.
+It works using Client-Side Routing, which means the page does not reload when navigating between routes.
+
+This router stores the navigation history in the browser and gives clean, normal URLs.
+It is the most common and basic router used in React applications.
+
+You can make simple routing like this :
+
+portfolio.com = /
+portfolio.com/about = /about
+portfolio.com/contact = /contact
+
+Example :
+
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/contact" element={<Contact />} />
+  </Routes>
+</BrowserRouter>
+
+
+HashRouter :
+
+HashRouter uses the URL hash (#) to handle routing.
+It does NOT use the History API.
+
+The route comes after the # symbol, so the server is never involved in routing.
+
+This router is useful when the hosting server does not support client-side routing
+(like GitHub Pages).
+
+URLs look like this :
+
+portfolio.com/#/
+portfolio.com/#/about
+portfolio.com/#/contact
+
+Example :
+
+<HashRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/contact" element={<Contact />} />
+  </Routes>
+</HashRouter>
+
+
+MemoryRouter :
+
+MemoryRouter stores the routing history in memory, not in the browser URL.
+
+The URL does not change at all when navigating between routes.
+
+This router is mainly used for testing or in environments where there is no browser
+(like React Native).
+
+Key Points :
+
+- No visible URL changes
+- History exists only in memory
+- Mostly used in testing
+
+Example :
+
+<MemoryRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+  </Routes>
+</MemoryRouter>
+
+
+StaticRouter :
+
+StaticRouter is mainly used for Server-Side Rendering (SSR).
+
+It does not use browser APIs and does not allow navigation on the client side.
+
+Routes are fixed and rendered based on the provided location.
+
+This router is used on the server, not in normal client-side React apps.
+
+Key Points :
+
+- Used for SSR
+- No client-side navigation
+- Requires a fixed location
+
+Example :
+
+<StaticRouter location="/about">
+  <Routes>
+    <Route path="/about" element={<About />} />
+  </Routes>
+</StaticRouter>
+
+
+Summary :
+
+BrowserRouter  -> Most common, clean URLs, client-side routing
+HashRouter     -> Uses #, good for static hosting
+MemoryRouter   -> No URL change, mainly for testing
+StaticRouter   -> Used for server-side rendering
