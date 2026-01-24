@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  color: #fff;
+  font-family: "Google Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+p {
+  font-size: 2.5rem;
+  margin: 30px 0;
+}
+
+button {
+  background: rgb(255, 255, 117);
+  padding: 20px 60px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 1px 1px 10px 1.2px rgba(255, 255, 255, 0.613);
+}
+
+button:hover {
+  box-shadow: 1px 1px 10px 1.2px rgba(255, 255, 255, 0.5);
+}
